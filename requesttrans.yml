@@ -1,0 +1,16 @@
+apiVersion: configuration.konghq.com/v1
+kind: KongPlugin
+metadata:
+  name: request-transformer
+config:
+  add:
+    headers:
+      - "x-added-header:added-value"
+  remove:
+    headers:
+      - "x-remove-header"
+  replace:
+    headers:
+      - "x-replace-header:replaced-value"
+plugin: request-transformer
+
